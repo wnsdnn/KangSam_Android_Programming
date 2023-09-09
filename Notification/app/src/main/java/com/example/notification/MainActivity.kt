@@ -51,10 +51,10 @@ class MainActivity : AppCompatActivity() {
         builder.setWhen(System.currentTimeMillis())
         builder.setContentTitle("타이틀 입니다.")
         builder.setContentText("알림의 내용입니다.")
-
+        
         // 사용자가 알람을 지울수 없게 만들어주는 코드
-        builder.setAutoCancel(false)
-        builder.setOngoing(true)
+//        builder.setAutoCancel(false)
+//        builder.setOngoing(true)
 
         // 터치했을때 이동시킬 Intent
         val intent = Intent(this@MainActivity, DetailActivity::class.java)
@@ -65,6 +65,31 @@ class MainActivity : AppCompatActivity() {
             PendingIntent.FLAG_IMMUTABLE)
 
         builder.setContentIntent(pendingIntent)
+
+
+        // 알람에 Action 추가
+        builder.addAction(
+            NotificationCompat.Action.Builder(
+                R.drawable.baseline_notifications_paused_24,
+                "액션1",
+                pendingIntent
+            ).build()
+        )
+        builder.addAction(
+            NotificationCompat.Action.Builder(
+                R.drawable.baseline_notifications_paused_24,
+                "액션2",
+                pendingIntent
+            ).build()
+        )
+        builder.addAction(
+            NotificationCompat.Action.Builder(
+                R.drawable.baseline_notifications_paused_24,
+                "액션3",
+                pendingIntent
+            ).build()
+        )
+
 
         manager.notify(11, builder.build())
     }
