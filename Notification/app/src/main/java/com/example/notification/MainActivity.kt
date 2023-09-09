@@ -3,6 +3,8 @@ package com.example.notification
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Intent
 import android.graphics.Color
 import android.media.AudioAttributes
 import android.media.RingtoneManager
@@ -53,6 +55,16 @@ class MainActivity : AppCompatActivity() {
         // 사용자가 알람을 지울수 없게 만들어주는 코드
         builder.setAutoCancel(false)
         builder.setOngoing(true)
+
+        // 터치했을때 이동시킬 Intent
+        val intent = Intent(this@MainActivity, DetailActivity::class.java)
+        val pendingIntent = PendingIntent.getActivity(
+            this@MainActivity,
+            10,
+            intent,
+            PendingIntent.FLAG_IMMUTABLE)
+
+        builder.setContentIntent(pendingIntent)
 
         manager.notify(11, builder.build())
     }
