@@ -33,6 +33,15 @@ class MainActivity : AppCompatActivity() {
         binding.notificationBtn.setOnClickListener {
             sendNotification()
         }
+
+        binding.cancelBtn.setOnClickListener {
+            notificationCencel()
+        }
+    }
+
+    fun notificationCencel() {
+        // 알림 삭제
+        manager.cancel(11)
     }
 
     fun sendNotification() {
@@ -40,6 +49,10 @@ class MainActivity : AppCompatActivity() {
         builder.setWhen(System.currentTimeMillis())
         builder.setContentTitle("타이틀 입니다.")
         builder.setContentText("알림의 내용입니다.")
+
+        // 사용자가 알람을 지울수 없게 만들어주는 코드
+        builder.setAutoCancel(false)
+        builder.setOngoing(true)
 
         manager.notify(11, builder.build())
     }
