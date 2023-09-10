@@ -11,11 +11,13 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.RemoteInput
 import androidx.databinding.DataBindingUtil
 import com.example.notification_test.databinding.ActivityMainBinding
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
 
@@ -75,6 +77,8 @@ class MainActivity : AppCompatActivity() {
 //
 //        builder.setContentIntent(pendingIntent)
 
+//        manager.notify(11, builder.build())
+
 
         // ========================================================================================
 
@@ -88,34 +92,60 @@ class MainActivity : AppCompatActivity() {
 //            ).build()
 //        )
 
+//        manager.notify(11, builder.build())
+
 
         // ========================================================================================
 
 
         // 알림에 답장하기 추가
-        val KEY_TEXT_RERLY = "key_text_reply"
-        val replyLabel = "답장을 작성하세요"
-        val remoteInput: RemoteInput = RemoteInput.Builder(KEY_TEXT_RERLY).run {
-            setLabel(replyLabel)
-            build()
-        }
-
-        val replyIntent = Intent(this@MainActivity, ReplyReceiver::class.java)
-        val replyPendingIntent = PendingIntent.getBroadcast(this@MainActivity, 30, replyIntent, PendingIntent.FLAG_MUTABLE)
-
-        builder.addAction(
-            NotificationCompat.Action.Builder(
-                R.drawable.baseline_send_24,
-                "답장",
-                replyPendingIntent
-            ).addRemoteInput(remoteInput).build()
-        )
+//        val KEY_TEXT_RERLY = "key_text_reply"
+//        val replyLabel = "답장을 작성하세요"
+//        val remoteInput: RemoteInput = RemoteInput.Builder(KEY_TEXT_RERLY).run {
+//            setLabel(replyLabel)
+//            build()
+//        }
+//
+//        val replyIntent = Intent(this@MainActivity, ReplyReceiver::class.java)
+//        val replyPendingIntent = PendingIntent.getBroadcast(this@MainActivity, 30, replyIntent, PendingIntent.FLAG_MUTABLE)
+//
+//        builder.addAction(
+//            NotificationCompat.Action.Builder(
+//                R.drawable.baseline_send_24,
+//                "답장",
+//                replyPendingIntent
+//            ).addRemoteInput(remoteInput).build()
+//        )
 
 //        val replyTxt = RemoteInput.getResultsFromIntent(intent)?.getCharSequence("key_text_reply")
 //        Toast.makeText(this@MainActivity, "$replyTxt", Toast.LENGTH_SHORT).show()
 
+//        manager.notify(11, builder.build())
+
+
         // ========================================================================================
 
+
+        // 프로그래스바
+//        builder.setProgress(100, 0, false)
+//        manager.notify(11, builder.build())
+
+//        thread {
+//            for (i in 1..100) {
+//                builder.setProgress(100, i, false)
+//                manager.notify(11, builder.build())
+//                SystemClock.sleep(100)
+//            }
+//        }
+
+
+        // 프로그래스바 무한반복
+//        builder.setProgress(100, 0, true)
+//        manager.notify(11, builder.build())
+
+
+
+        // ========================================================================================
 
         manager.notify(11, builder.build())
     }
