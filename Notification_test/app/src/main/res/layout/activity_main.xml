@@ -50,6 +50,24 @@
                 android:text="Picture"/>
 
             <Button
+                android:id="@+id/longTextBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LongText"/>
+
+            <Button
+                android:id="@+id/inBoxBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="InBox"/>
+
+            <Button
+                android:id="@+id/personMsgBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PersonMessage"/>
+
+            <Button
                 android:id="@+id/cancelBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

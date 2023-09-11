@@ -15,7 +15,9 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
+import androidx.core.app.Person
 import androidx.core.app.RemoteInput
+import androidx.core.graphics.drawable.IconCompat
 import androidx.databinding.DataBindingUtil
 import com.example.notification_test.databinding.ActivityMainBinding
 import kotlin.concurrent.thread
@@ -56,9 +58,81 @@ class MainActivity : AppCompatActivity() {
             sendPictureNotification()
         }
 
+        binding.longTextBtn.setOnClickListener {
+            sendLongTextNotification()
+        }
+
+        binding.inBoxBtn.setOnClickListener {
+            sendInBoxNotification()
+        }
+
+        binding.personMsgBtn.setOnClickListener {
+            sendpersonMsgNotification()
+        }
+
         binding.cancelBtn.setOnClickListener {
             notificationCencel()
         }
+    }
+
+    fun sendpersonMsgNotification() {
+        addNotificationInfo()
+
+        val sender1: Person = Person.Builder()
+            .setName("kkang")
+            .setIcon(IconCompat.createWithResource(this, R.drawable.baseline_person_24))
+            .build()
+
+        val sender2: Person = Person.Builder()
+            .setName("wnsdnn")
+            .setIcon(IconCompat.createWithResource(this, R.drawable.baseline_person_4_24))
+            .build()
+
+
+        val message1 = NotificationCompat.MessagingStyle.Message(
+            "hello",
+            System.currentTimeMillis(),
+            sender1
+        )
+
+        val message2 = NotificationCompat.MessagingStyle.Message(
+            "world",
+            System.currentTimeMillis(),
+            sender2
+        )
+
+        val messageStyle = NotificationCompat.MessagingStyle(sender1)
+            .addMessage(message1)
+            .addMessage(message2)
+        builder.setStyle(messageStyle)
+
+        manager.notify(18, builder.build())
+    }
+
+    fun sendInBoxNotification() {
+        addNotificationInfo()
+
+        val style = NotificationCompat.InboxStyle()
+        style.addLine("1코스 - 수락.불암산코스")
+        style.addLine("2코스 - 용마.아차산코스")
+        style.addLine("3코스 - 고덕.일자산코스")
+        style.addLine("4코스 - 대모,우면산코스")
+        builder.setStyle(style)
+
+        manager.notify(17, builder.build())
+    }
+
+    fun sendLongTextNotification() {
+        addNotificationInfo()
+
+        val bigTextStyle = NotificationCompat.BigTextStyle()
+        val text = """서울둘레길
+            |서을을 한 바퀴 휘감는 총 연장 157km의 서울둘레길은 8개 코스로 서울의 역사, 문화, 자연상태 등을 스토리로 엮어 국내의 탐방객들이 느끼고, 배우고, 체험할 수 있도록 조성한 도보길입니다. 서울둘레길은 '숲길', '하천길', '마을길'로 구성되어 있습니다. 둘레길 곳곳에 휴게시설과 북카페, 쉼터를 만들어 시민들이 자연스럽게 휴식을 취할 수 있게 했고, 전통 깊은 사찰과 유적지을 연결해 서울의 역사와 문화, 자연생태를 곳곳에서 체험할 수 있습니다.
+        """.trimMargin()
+        bigTextStyle.bigText(text)
+        builder.setStyle(bigTextStyle)
+
+        manager.notify(16, builder.build())
     }
 
     fun sendPictureNotification() {
