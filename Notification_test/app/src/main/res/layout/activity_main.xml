@@ -26,6 +26,30 @@
                 android:text="Notification"/>
 
             <Button
+                android:id="@+id/actionBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Action"/>
+
+            <Button
+                android:id="@+id/replyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reply"/>
+
+            <Button
+                android:id="@+id/progressBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progress"/>
+
+            <Button
+                android:id="@+id/pictureBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Picture"/>
+
+            <Button
                 android:id="@+id/cancelBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
