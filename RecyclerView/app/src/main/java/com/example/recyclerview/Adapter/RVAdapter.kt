@@ -3,6 +3,7 @@ package com.example.recyclerview.Adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview.R
 import java.util.zip.Inflater
@@ -22,10 +23,11 @@ class RVAdapter(val items: MutableList<String>): RecyclerView.Adapter<RVAdapter.
         return items.size
     }
 
-    inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
-        fun itemBinding(item: String) {
-
+        fun itemBinding(text: String) {
+            val item_text = itemView.findViewById<TextView>(R.id.rv_text)
+            item_text.text = text
         }
 
     }
