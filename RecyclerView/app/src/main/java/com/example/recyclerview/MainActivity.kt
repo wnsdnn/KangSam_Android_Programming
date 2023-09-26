@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recyclerview.Adapter.RVAdapter
+import com.example.recyclerview.Decoration.RVDecoration
 import com.example.recyclerview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
 
-
+        // 리사이클러뷰 적용
         val items = mutableListOf<String>()
         items.add("item1")
         items.add("item2")
@@ -35,5 +36,7 @@ class MainActivity : AppCompatActivity() {
         rv.layoutManager = LinearLayoutManager(this@MainActivity)
 
 
+        // 데커레이션 적용
+        rv.addItemDecoration(RVDecoration(this@MainActivity))
     }
 }
