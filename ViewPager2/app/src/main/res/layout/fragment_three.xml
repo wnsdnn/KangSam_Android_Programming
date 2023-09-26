@@ -6,6 +6,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#0000ff"
         tools:context=".Fragments.ThreeFragment">
 
 
@@ -14,7 +15,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center|center_horizontal"
-            android:text="@string/hello_blank_fragment" />
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="Hello ThreeFragment!!" />
 
     </FrameLayout>
 
