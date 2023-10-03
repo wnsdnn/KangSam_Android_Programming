@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Ch11_JetPack" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0078ff</item>
+        <item name="colorPrimaryVariant">#0000ff</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Ch11_JetPack" parent="Base.Theme.Ch11_JetPack" />
+</resources>
