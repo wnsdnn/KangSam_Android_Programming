@@ -19,7 +19,7 @@ class CollapsingToolbarActivity : AppCompatActivity() {
 
 
         val items = mutableListOf<String>()
-        for (i in 1..9) {
+        for (i in 1..15) {
             items.add("item $i")
         }
 

@@ -17,12 +17,24 @@
             android:background="@color/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+
+            <!--
+
+            layout_scrollFlags 속성들
+
+            scroll|enterAlways: 스크롤 시 완전히 사라졌다가 거꾸로 스크롤 시 처음부터 다시 나타납니다.
+            scroll|enterAlwaysCollapsed: 스크롤 시 완전히 사라졌다가 거꾸로 스크롤 시 처음부터 나타나지 않고
+            메인 콘텐츠 부분이 끝까지 스크롤된 다음에 나타납니다.
+            scroll|exitUntilCollapsed: 스크롤 시 모두 사라지지 않고 툴바를 출력할 정도의 한 줄만 남을 때까지 스크롤됩니다.
+
+            -->
+
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:contentScrim="?attr/colorPrimary"
-                app:expandedTitleMarginBottom="50dp"
-                app:expandedTitleMarginStart="48dp"
+                app:expandedTitleMarginBottom="40dp"
+                app:expandedTitleMarginStart="25dp"
                 app:expandedTitleTextColor="#fff"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 app:title="AppBar Title">
@@ -39,7 +51,6 @@
                     android:id="@+id/toolbar"
                     app:layout_collapseMode="pin"
                     app:layout_scrollFlags="scroll|enterAlways"
-                    android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize" />
 
