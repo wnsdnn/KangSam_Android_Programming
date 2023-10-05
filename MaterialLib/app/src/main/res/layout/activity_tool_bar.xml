@@ -2,7 +2,7 @@
 
 <layout>
 
-    <LinearLayout
+    <com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -19,18 +19,61 @@
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
+                app:layout_scrollFlags="scroll|enterAlways"
                 android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize" />
 
             <ImageView
                 android:scaleType="centerCrop"
+                app:layout_scrollFlags="scroll|enterAlways"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/baseball" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
-    </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="[서울=뉴시스]권세림 리포터 = 416만 유튜버 허팝이 로또 1000만원어치를 구매한 뒤 당첨 결과를 공개했다. 지난 3일 허팝은 자신의 유튜브 채널에 '로또 1000만원치 샀는데 1등 당첨되는 건가요?!'라는 제목의 영상을 게재했다.
+과거 로또 3등에 당첨된 경험이 있는 허팝은 '많이 사면 확률적으로 1등 당첨 확률이 올라가는지 확인해 보겠다'며 시도 배경을 설명했다. 로또 구매에 앞서 그는 '로또는 1인 1회 10만원까지 구매할 수 있다. 다만 여러 번, 다양한 지점에 가서 10만원어치를 계속 살 순 있다. 혹시라도 이것도 막아야겠다 싶으면 이 영상을 토대로 더욱 강한 규제를 해주시면 되겠다'고 말했다. 이후 허팝은 여러 복권 판매점을 돌며 자동 로또 10만원어치를 구매했다.
+그는 '처음엔 로또 판매점에 가서 10만원어치 계속 구입하다가 도저히 안 되겠다 싶어서 친구들에게 부탁해서 구매했다'며 '친구가 사 온 로또에서 1등에 당첨되면 그 친구에게 당첨금을 주겠다. 다만 절반 정도는 기부하는 거로 얘기했다'고 설명했다.당첨 결과를 확인해 본 결과, 1, 2, 3등에 당첨된 로또는 한 장도 없었다. 허팝은 '5등 5000원은 222장 나왔고, 4등 5만원은 13장 나왔다. 1000만원어치 로또를 사서 176만원에 당첨됐다'고 밝혔다.
+허팝은 '로또를 이렇게 많이 사나, 한 장을 사나 결과는 결국 운에 맡겨야 하는 것 같다'며 '혹시라도 하신다면 소액으로 한 주의 소소한 기대와 행복을 느끼는 정도로 하시길 바란다'고 덧붙였다."
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="[서울=뉴시스]권세림 리포터 = 416만 유튜버 허팝이 로또 1000만원어치를 구매한 뒤 당첨 결과를 공개했다. 지난 3일 허팝은 자신의 유튜브 채널에 '로또 1000만원치 샀는데 1등 당첨되는 건가요?!'라는 제목의 영상을 게재했다.
+과거 로또 3등에 당첨된 경험이 있는 허팝은 '많이 사면 확률적으로 1등 당첨 확률이 올라가는지 확인해 보겠다'며 시도 배경을 설명했다. 로또 구매에 앞서 그는 '로또는 1인 1회 10만원까지 구매할 수 있다. 다만 여러 번, 다양한 지점에 가서 10만원어치를 계속 살 순 있다. 혹시라도 이것도 막아야겠다 싶으면 이 영상을 토대로 더욱 강한 규제를 해주시면 되겠다'고 말했다. 이후 허팝은 여러 복권 판매점을 돌며 자동 로또 10만원어치를 구매했다.
+그는 '처음엔 로또 판매점에 가서 10만원어치 계속 구입하다가 도저히 안 되겠다 싶어서 친구들에게 부탁해서 구매했다'며 '친구가 사 온 로또에서 1등에 당첨되면 그 친구에게 당첨금을 주겠다. 다만 절반 정도는 기부하는 거로 얘기했다'고 설명했다.당첨 결과를 확인해 본 결과, 1, 2, 3등에 당첨된 로또는 한 장도 없었다. 허팝은 '5등 5000원은 222장 나왔고, 4등 5만원은 13장 나왔다. 1000만원어치 로또를 사서 176만원에 당첨됐다'고 밝혔다.
+허팝은 '로또를 이렇게 많이 사나, 한 장을 사나 결과는 결국 운에 맡겨야 하는 것 같다'며 '혹시라도 하신다면 소액으로 한 주의 소소한 기대와 행복을 느끼는 정도로 하시길 바란다'고 덧붙였다."
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:text="[서울=뉴시스]권세림 리포터 = 416만 유튜버 허팝이 로또 1000만원어치를 구매한 뒤 당첨 결과를 공개했다. 지난 3일 허팝은 자신의 유튜브 채널에 '로또 1000만원치 샀는데 1등 당첨되는 건가요?!'라는 제목의 영상을 게재했다.
+과거 로또 3등에 당첨된 경험이 있는 허팝은 '많이 사면 확률적으로 1등 당첨 확률이 올라가는지 확인해 보겠다'며 시도 배경을 설명했다. 로또 구매에 앞서 그는 '로또는 1인 1회 10만원까지 구매할 수 있다. 다만 여러 번, 다양한 지점에 가서 10만원어치를 계속 살 순 있다. 혹시라도 이것도 막아야겠다 싶으면 이 영상을 토대로 더욱 강한 규제를 해주시면 되겠다'고 말했다. 이후 허팝은 여러 복권 판매점을 돌며 자동 로또 10만원어치를 구매했다.
+그는 '처음엔 로또 판매점에 가서 10만원어치 계속 구입하다가 도저히 안 되겠다 싶어서 친구들에게 부탁해서 구매했다'며 '친구가 사 온 로또에서 1등에 당첨되면 그 친구에게 당첨금을 주겠다. 다만 절반 정도는 기부하는 거로 얘기했다'고 설명했다.당첨 결과를 확인해 본 결과, 1, 2, 3등에 당첨된 로또는 한 장도 없었다. 허팝은 '5등 5000원은 222장 나왔고, 4등 5만원은 13장 나왔다. 1000만원어치 로또를 사서 176만원에 당첨됐다'고 밝혔다.
+허팝은 '로또를 이렇게 많이 사나, 한 장을 사나 결과는 결국 운에 맡겨야 하는 것 같다'며 '혹시라도 하신다면 소액으로 한 주의 소소한 기대와 행복을 느끼는 정도로 하시길 바란다'고 덧붙였다."
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout>
 
 </layout>
