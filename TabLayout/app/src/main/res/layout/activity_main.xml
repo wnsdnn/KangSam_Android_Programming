@@ -12,8 +12,14 @@
         tools:context=".MainActivity">
 
 
+        <!--
+            tabGravity="center": 탭 버튼 가운데 정렬
+            tabMode="scrollable": 탭 버튼 스크롤
+        -->
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
+            app:tabGravity="center"
+            app:tabMode="scrollable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
