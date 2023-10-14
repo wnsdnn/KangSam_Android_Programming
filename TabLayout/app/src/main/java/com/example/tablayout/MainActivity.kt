@@ -34,25 +34,25 @@ class MainActivity : AppCompatActivity() {
         tab3.text = "Tab3"
         tabLayout.addTab(tab3)
 
-//        val tab4: TabLayout.Tab = tabLayout.newTab()
-//        tab4.text = "Tab4"
-//        tabLayout.addTab(tab4)
-//
-//        val tab5: TabLayout.Tab = tabLayout.newTab()
-//        tab5.text = "Tab5"
-//        tabLayout.addTab(tab5)
-//
-//        val tab6: TabLayout.Tab = tabLayout.newTab()
-//        tab6.text = "Tab6"
-//        tabLayout.addTab(tab6)
-//
-//        val tab7: TabLayout.Tab = tabLayout.newTab()
-//        tab7.text = "Tab7"
-//        tabLayout.addTab(tab7)
-//
-//        val tab8: TabLayout.Tab = tabLayout.newTab()
-//        tab8.text = "Tab8"
-//        tabLayout.addTab(tab8)
+        val tab4: TabLayout.Tab = tabLayout.newTab()
+        tab4.text = "Tab4"
+        tabLayout.addTab(tab4)
+
+        val tab5: TabLayout.Tab = tabLayout.newTab()
+        tab5.text = "Tab5"
+        tabLayout.addTab(tab5)
+
+        val tab6: TabLayout.Tab = tabLayout.newTab()
+        tab6.text = "Tab6"
+        tabLayout.addTab(tab6)
+
+        val tab7: TabLayout.Tab = tabLayout.newTab()
+        tab7.text = "Tab7"
+        tabLayout.addTab(tab7)
+
+        val tab8: TabLayout.Tab = tabLayout.newTab()
+        tab8.text = "Tab8"
+        tabLayout.addTab(tab8)
 
 
         // 기본값 처리
