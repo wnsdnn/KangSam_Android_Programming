@@ -22,5 +22,12 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        binding.extendedFab.setOnClickListener {
+            when (binding.extendedFab.isExtended) {
+                true -> binding.extendedFab.shrink()
+                false -> binding.extendedFab.extend()
+            }
+        }
+
     }
 }
