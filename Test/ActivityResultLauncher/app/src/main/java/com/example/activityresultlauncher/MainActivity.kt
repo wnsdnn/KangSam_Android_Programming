@@ -19,8 +19,11 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
 
+        // registerForActivityResult 객체 생성
         val requestLauncher: ActivityResultLauncher<Intent> =
+            // intent를 발생시키는 StartActivityForResult 객체를 사용
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                // resultData 받아오기
                 val resultData = it.data?.getStringExtra("resultData")
                 Toast.makeText(this, resultData, Toast.LENGTH_SHORT).show()
             }
