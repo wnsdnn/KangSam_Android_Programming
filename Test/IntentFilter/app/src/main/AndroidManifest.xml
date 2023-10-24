@@ -13,11 +13,22 @@
         android:theme="@style/Theme.IntentFilter"
         tools:targetApi="31">
         <activity
-            android:name=".TwoActivity"
+            android:name=".ThreeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="ACTION_EDIT" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TwoActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ACTION_EDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:scheme="http" />
             </intent-filter>
         </activity>

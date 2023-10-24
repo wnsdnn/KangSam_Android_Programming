@@ -17,9 +17,20 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.btn.setOnClickListener {
-            val intent = Intent()
-            intent.action = "ACTION_EDIT"
-            intent.data = Uri.parse("http://www.google.com")
+//            val intent = Intent()
+//            intent.action = "ACTION_EDIT"
+//            intent.data = Uri.parse("http://www.google.com")
+
+            // 이런식으로도 가능
+            val intent = Intent("ACTION_EDIT", Uri.parse("http://www.google.com"))
+
+            startActivity(intent)
+        }
+
+
+        binding.btn2.setOnClickListener {
+            val intent = Intent("ACTION_EDIT")
+            intent.type = "image/*"
             startActivity(intent)
         }
 
