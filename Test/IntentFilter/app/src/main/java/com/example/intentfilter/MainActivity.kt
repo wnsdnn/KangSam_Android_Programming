@@ -62,5 +62,17 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        binding.btn6.setOnClickListener {
+            try {
+                val packageInfo = packageManager.getPackageInfo("com.example.test_outter", 0)
+                val versionName = packageInfo.versionName
+
+                Toast.makeText(this, "versionName: $versionName", Toast.LENGTH_SHORT).show()
+            } catch (e: Exception) {
+                Toast.makeText(this, "외부 앱 정보접근 권한 혹은 해당 기기에 test_outter앱이 다운로드 되어있는지 확인해주세요.", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
     }
 }
