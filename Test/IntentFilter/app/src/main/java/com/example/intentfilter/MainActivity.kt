@@ -4,8 +4,11 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.intentfilter.databinding.ActivityMainBinding
+import java.lang.Exception
+import java.nio.channels.InterruptedByTimeoutException
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +34,30 @@ class MainActivity : AppCompatActivity() {
         binding.btn2.setOnClickListener {
             val intent = Intent("ACTION_EDIT")
             intent.type = "image/*"
+            startActivity(intent)
+        }
+
+
+        binding.btn3.setOnClickListener {
+            val intent = Intent("ACTION_WNDSNN")
+
+            try {
+                startActivity(intent)
+            } catch (e: Exception) {
+                Toast.makeText(this, "액티비티가 존재하지 않습니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
+        binding.btn4.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:37,7749, 127.4194"))
+            startActivity(intent)
+        }
+
+
+        binding.btn5.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:37.7749, 127.4194"))
+            intent.setPackage("com.google.android.apps.maps")
             startActivity(intent)
         }
 

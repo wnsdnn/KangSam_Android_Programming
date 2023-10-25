@@ -34,6 +34,27 @@
                 android:layout_height="wrap_content"
                 android:text="ThreeActivity로 이동!" />
 
+            <Button
+                android:id="@+id/btn3"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="액티비티가 없을때" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="지도앱 실행 (액티비티가 여려개 일때)" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="구글 지도앱 실행" />
+
         </LinearLayout>
 
 
