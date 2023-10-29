@@ -15,7 +15,8 @@
         <activity
             android:name=".InputModeActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustUnspecified">
+            android:windowSoftInputMode="adjustUnspecified"
+            android:screenOrientation="portrait">
             <!--
                 KeyBoard 입력 모드 설정 - windowSoftInputMode
                 adjustPan - 키보드가 올라갈 때 입력 에디트 텍스트에 맞춰 화면을 위로 올립니다.
@@ -24,6 +25,11 @@
                 stateHidden - 액티비티 실행 시 키보드가 자동으로 올라오는 것을 방지합니다.
                 stateVisible - 액티비티 실행 시 키보드가 자동으로 올라옵니다.
                 stateUnspecified(기본값) - 시스템이 적절한 키보드 상태를 설정하거나 테마에 따릅니다.
+
+
+                화면 방향 고정 - screenOrientation
+                landscape - 가로 방향 고정
+                portrait - 세로 방향 고정
             -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
