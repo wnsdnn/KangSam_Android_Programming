@@ -43,6 +43,13 @@
                 android:layout_height="wrap_content"
                 android:text="키보드 비활성화" />
 
+            <Button
+                android:id="@+id/toggleInputButton"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="toggle 버튼" />
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

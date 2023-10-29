@@ -29,5 +29,10 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "키보드가 비활성화되었습니다.", Toast.LENGTH_SHORT).show()
         }
 
+        binding.toggleInputButton.setOnClickListener {
+            manager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
+            Toast.makeText(this, "토글버튼 클릭.", Toast.LENGTH_SHORT).show()
+        }
+
     }
 }
