@@ -13,13 +13,27 @@
         android:theme="@style/Theme.SoftKeyboardTest"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".InputModeActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustUnspecified">
+            <!--
+                KeyBoard 입력 모드 설정 - windowSoftInputMode
+                adjustPan - 키보드가 올라갈 때 입력 에디트 텍스트에 맞춰 화면을 위로 올립니다.
+                adjustResize - 키보드가 올라올 때 액티비티의 크기를 조정합니다.
+                adjustUnspecified(기본값) - 상황에 맞는 옵션을 시스템이 알아서 설정합니다.
+                stateHidden - 액티비티 실행 시 키보드가 자동으로 올라오는 것을 방지합니다.
+                stateVisible - 액티비티 실행 시 키보드가 자동으로 올라옵니다.
+                stateUnspecified(기본값) - 시스템이 적절한 키보드 상태를 설정하거나 테마에 따릅니다.
+            -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
         </activity>
     </application>
 
