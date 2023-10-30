@@ -27,7 +27,7 @@
         <activity
             android:name=".SingleInstance.A_TwoActivity"
             android:exported="false"
-            android:launchMode="singleInstance"/>
+            android:launchMode="singleTask"/>
         <activity
             android:name=".SingleInstance.A_OneActivity"
             android:exported="true">
