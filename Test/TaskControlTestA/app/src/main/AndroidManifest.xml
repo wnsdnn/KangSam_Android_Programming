@@ -12,8 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskControlTestA"
         tools:targetApi="31">
-
-
         <!--
             launchMode 속성 - 태스크 실행 모드 설정
 
@@ -21,22 +19,35 @@
             singleTop: 인텐트를 실행할때 태스트 최상위에 현재 액티비티가 존재할때 객체생성 X => onNewIntent() 함수 실행
             singleTask: 같은 앱에서는 적용되지 않으며 다른 앱의 액티비티를 인텐트로 실행할때만 적용.
                         기기에 따라 다르지만 태스크가 바뀌면 화면 애니메이션 효과가 나타날 수 있으며, 결국 새오운 앱이 실행되는 것을 사용자에게 알리고 싶을 때 사용
+            singleInstance: singleTask처럼 새로운 태스크를 만들어 등록하는데, 태스크 하나당 하나의 액티비티만 등록.
         -->
 
-        <!-- launchMode = "singleTask" -->
+
+        <!-- launchMode = "singleInstance" -->
         <activity
-            android:name=".SingleTask.A_TwoActivity"
+            android:name=".SingleInstance.A_TwoActivity"
             android:exported="false"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleInstance"/>
         <activity
-            android:name=".SingleTask.A_OneActivity"
-            android:exported="true"
-            android:launchMode="singleTask">
+            android:name=".SingleInstance.A_OneActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+
+        <!-- launchMode = "singleTask" -->
+        <activity
+            android:name=".SingleTask.A_TwoActivity"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".SingleTask.A_OneActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
         </activity>
 
 
@@ -51,8 +62,7 @@
             android:launchMode="singleTop" />
         <activity
             android:name=".SingleTop.A_OneActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
 
 
         <!-- launchMode = "standard" -->

@@ -12,6 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskControlTestB"
         tools:targetApi="31">
+
+        <!-- launchMode = "singleInstance" -->
+        <activity
+            android:name=".SingleInstance.B_TwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SingleInstance.B_OneActivity"
+            android:exported="true"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="ACTION_SINGLEINSTANCE_BONE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- launchMode = "singleTask" -->
         <activity
             android:name=".SingleTask.B_TwoActivity"
             android:exported="false" />
@@ -19,7 +37,7 @@
             android:name=".SingleTask.B_OneActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="ACTION_BONE" />
+                <action android:name="ACTION_SINGLETASK_BONE" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
