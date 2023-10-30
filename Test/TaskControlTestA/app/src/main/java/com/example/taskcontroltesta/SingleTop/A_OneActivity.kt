@@ -16,7 +16,7 @@ class A_OneActivity : AppCompatActivity() {
         setContentView(R.layout.activity_aone2)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_aone2)
 
-        binding.AtowBtn.setOnClickListener {
+        binding.AtwoBtn.setOnClickListener {
             val intent = Intent(this, A_TwoActivity::class.java)
             startActivity(intent)
         }

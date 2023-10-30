@@ -27,7 +27,7 @@
                 android:text="SingleTop_Activity" />
 
             <Button
-                android:id="@+id/AtowBtn"
+                android:id="@+id/AtwoBtn"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

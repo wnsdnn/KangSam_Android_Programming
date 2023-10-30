@@ -12,18 +12,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskControlTestA"
         tools:targetApi="31">
-        <activity
-            android:name=".SingleTask.A_TwoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SingleTask.A_OneActivity"
-            android:exported="false" />
+
+
         <!--
             launchMode 속성 - 태스크 실행 모드 설정
 
             standard: 인텐트를 실행할때 마다 태스크에 객체 생성 (기본값)
             singleTop: 인텐트를 실행할때 태스트 최상위에 현재 액티비티가 존재할때 객체생성 X => onNewIntent() 함수 실행
         -->
+
+        <!-- launchMode = "singleTask" -->
+        <activity
+            android:name=".SingleTask.A_TwoActivity"
+            android:exported="false"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".SingleTask.A_OneActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
         <!-- launchMode = "singleTop" -->
         <activity
             android:name=".SingleTop.A_ThreeActivity"
@@ -35,14 +49,11 @@
             android:launchMode="singleTop" />
         <activity
             android:name=".SingleTop.A_OneActivity"
-            android:exported="true"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
+        </activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- launchMode = "standard" -->
+
+        <!-- launchMode = "standard" -->
         <activity
             android:name=".Standard.A_TwoActivity"
             android:exported="false"

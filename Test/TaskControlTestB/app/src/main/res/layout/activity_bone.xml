@@ -7,7 +7,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SingleTask.A_OneActivity">
+        tools:context=".SingleTask.B_OneActivity">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -23,18 +23,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textSize="32sp"
-                android:text="SingleTask_Activity" />
+                android:text="B_OneActivity" />
 
             <Button
-                android:id="@+id/AtwoBtn"
+                android:id="@+id/BtwoBtn"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="A_TwoActivity" />
+                android:text="B_TwoActivity" />
 
         </LinearLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

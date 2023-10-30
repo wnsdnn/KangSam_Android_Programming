@@ -13,6 +13,18 @@
         android:theme="@style/Theme.TaskControlTestB"
         tools:targetApi="31">
         <activity
+            android:name=".SingleTask.B_TwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SingleTask.B_OneActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ACTION_BONE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
