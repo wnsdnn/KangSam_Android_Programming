@@ -7,8 +7,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
+        tools:context=".ThreadActivity">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
@@ -36,8 +35,6 @@
                 android:text="sum: 0"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
