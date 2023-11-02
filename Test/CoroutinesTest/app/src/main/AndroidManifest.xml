@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CoroutinesTest"
         tools:targetApi="31">
         <activity
-            android:name=".ThreadActivity"
+            android:name=".CoroutineScopeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +22,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ThreadActivity"
+            android:exported="true"></activity>
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
