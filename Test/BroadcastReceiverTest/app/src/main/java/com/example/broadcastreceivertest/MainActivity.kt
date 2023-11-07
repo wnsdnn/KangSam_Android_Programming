@@ -7,11 +7,17 @@ import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import com.example.broadcastreceivertest.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         var receiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent?) {
@@ -28,6 +34,12 @@ class MainActivity : AppCompatActivity() {
 
         registerReceiver(receiver, filter)
 
+
+        binding.removeBtn.setOnClickListener {
+            // 리시버 등록 해제
+            unregisterReceiver(receiver)
+            Toast.makeText(this, "리시버 삭제", Toast.LENGTH_SHORT).show()
+        }
 
     }
 }
