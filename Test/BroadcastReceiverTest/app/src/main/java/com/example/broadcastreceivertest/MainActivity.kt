@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             addAction(Intent.ACTION_SCREEN_OFF)
         }
 
-        registerReceiver(receiver, filter)
+//        registerReceiver(receiver, filter)
 
 
         binding.removeBtn.setOnClickListener {
